@@ -33,7 +33,7 @@
             var j = 1;
             var output = "<table border='1' width='500' cellpadding='5'>";
             for (i = 1; i <= rows; i++) {
-                output = output + "<tr";
+                output = output + "<tr>";
                 while (j <= cols) {
                     output = output + "<td>" + i * j + "</td>";
                     j++;
@@ -45,13 +45,26 @@
             document.write(output);
         }
     </script>
-</head>
-<body>
-    <script src="js/main.js"></script>
-    <script>
-        //var inputnumber = prompt("State Starting Number");
-        //document.write(addNumbers(inputnumber));
-        //document.write(addNumberWithWhileLoop(inputnumber));
+    <script type="text/javascript">
+        function triger() {
+            console.log("1");
+            document.getElementById("hover").addEventListener("mouseover", popup);
+            function popup() {
+                alert("Welcome to my webpage!!");
+            }
+        }
     </script>
+    <style>
+        p{
+            font-size:50px;
+            position:fixed;
+            left:550px;
+            top:300px;
+        }
+    </style>
+</head>
+<body onload="triger()">
+    <p id="hover">Welcome!!!</p>
+
 </body>
 </html>
