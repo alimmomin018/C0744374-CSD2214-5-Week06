@@ -110,6 +110,7 @@
             errors[5] = "<span style='color:red'>Please confirm your password!</span>";
             for (i in inputs) {
                 var errMessage = errors[i];
+
                 var div = divs[i];
                 if (inputs[i] == "")
                     document.getElementById(div).innerHTML = errMessage;
@@ -142,6 +143,15 @@
             }
             if (count == 6)
                 document.getElementById("errFinal").innerHTML = "All the data you entered is correct!!!";
+        }
+    </script>
+
+    <script>
+        function craeteAnimal(name) {
+            var obj = {};
+            obj.name = name;
+            obj.strength = Math.floor((Math.random() * 100) + 1);
+
         }
     </script>
 </head>
