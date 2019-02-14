@@ -47,24 +47,36 @@
     </script>
     <script type="text/javascript">
         function triger() {
-            console.log("1");
+            //console.log("1");
             document.getElementById("hover").addEventListener("mouseover", popup);
             function popup() {
                 alert("Welcome to my webpage!!");
             }
         }
+        
+    </script>
+    <script>
+        function imageTrigerHover() {
+            document.getElementById("imgHover").src = "images/bye.jpg";
+
+        }
+        function imageOut() {
+            document.getElementById("imgHover").src = "images/hi.png";
+
+        }
     </script>
     <style>
-        p{
-            font-size:50px;
-            position:fixed;
-            left:550px;
-            top:300px;
+        p {
+            font-size: 50px;
+            position: fixed;
+            left: 550px;
+            top: 300px;
         }
     </style>
 </head>
 <body onload="triger()">
     <p id="hover">Welcome!!!</p>
+    <img id="imgHover" onmouseover="imageTrigerHover()" onmouseout="imageOut()" src="images/bye.jpg"/>
     <script src="js/main.js"></script>
     <script>
                 //var inputnumber = prompt("State Starting Number");
